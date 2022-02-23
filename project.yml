@@ -1,5 +1,5 @@
 ---
-   - hosts: all
+   - hosts: webserver
      ignore_errors: yes
      become: yes
      tasks:
