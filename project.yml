@@ -1,5 +1,5 @@
 ---
-   - hosts: webserver
+   - hosts: all 
      ignore_errors: yes
      become: yes
      tasks:
@@ -15,4 +15,7 @@
             name: '*'
             state: latest
           when: ansible_distribution == "Ubuntu"
+        
+        - name: reboot the machine with all defaults
+          reboot:
 
